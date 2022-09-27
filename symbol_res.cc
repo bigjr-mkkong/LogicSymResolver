@@ -49,7 +49,7 @@ int apply(int opra, int oprb, char opc){
         case '~':
             return !opra;
         case '>':
-            return ((!opra)|oprb);
+            return ((!oprb)|opra);
         default:
             printf("Wrong logic operand: %c, quit",opc);
             exit(0);
@@ -61,7 +61,8 @@ int main(void){
     string s;
     cin>>s;
     for(int i=0;i<s.size();i++){
-        if(find(op_list.begin() ,op_list.end() ,s[i]) == op_list.end()){
+        if(find(op_list.begin() ,op_list.end() ,s[i]) == op_list.end() &&\
+             char2addr.find(s[i]) == char2addr.end()){
             symbol_table[num_of_sym] = (symbol_t){.c = s[i], .val = 0};
             char2addr.insert(pair<char, struct symbol_t*>(s[i],&symbol_table[num_of_sym]));
             num_of_sym++;
