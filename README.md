@@ -12,6 +12,8 @@ Remember always use round bracket ( "(" and ")" ) to include input expression ev
 - ">": Implication(IF...THEN...)
 - "~": Negation (NOT LOGIC)
 
+Proposition in this program should only be **A SINGLE UPPER CASE LETTER**
+
 # Input/Output example:
 ```
 Input:
