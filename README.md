@@ -5,14 +5,15 @@ An Logical Expression Resolver for those people who doesn't want to waste their 
 Clone the whole repository and run `make` in terminal to compile the source code
 
 # Usage
-Remember always use round bracket ('(') to include input expression even if you do not need to do so.
+Remember always use round bracket ( "(" and ")" ) to include input expression even if you do not need to do so.
 
-&: Conjunction (AND LOGIC)
-|: Disjunction (OR LOGIC)
->: Implication(If...then...)
-~: Negation (NOT LOGIC)
+- "&": Conjunction (AND LOGIC)
+- "|": Disjunction (OR LOGIC)
+- ">": Implication(IF...THEN...)
+- "~": Negation (NOT LOGIC)
 
 # Input/Output example:
+```
 Input:
     (A|B)
 Output:
@@ -28,12 +29,13 @@ Output:
     A:0 A:1          Result: False
     A:1 A:0          Result: False
     A:0 A:0          Result: False
+```
 
-# Install:
-    If you're using Linux, just clone the whole repo and run make in terminal to get an ELF file called "symbol_res.out"
+# How to Install
+If you are using Linux, just clone the repo and run `make` in terminal, you'll see `symbol_res.out` as an ELF file
 
-    IF YOU ARE NOT USING LINUX, you may need to download a c++ compiler and execute following command:
-    ```
-    g++ symbol_res.cc -o symbol_res.exe
-    ```
-    under the project directory, then execute the symbol_res.exe in your computer.
+If **YOU ARE NOT USING LINUX**, you should download an cpp compiler(both clang or g++ should be fine), and execute:
+```
+g++ symbol_res.cc -o symbol_res.exe
+```
+in your terminal, then you will see an executable file output(replace g++ with clang if you're using clang).
